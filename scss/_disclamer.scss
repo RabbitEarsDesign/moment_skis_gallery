@@ -1,0 +1,86 @@
+// Disclamer
+#disclamer {
+  background: white;
+  .disclamer-grid {
+    display: grid;
+    grid-template-areas: "disclamer disclamer form";
+    .disclamer-text {
+      grid-area: disclamer;
+      margin-right: 5rem;
+      .text-group {
+        margin-bottom: 1rem;
+
+        h2 {
+          font-size: 1.5rem;
+          text-align: left;
+          padding-bottom: 0.5rem !important;
+        }
+        p {
+          line-height: 1.6rem;
+          font-size: 0.75rem;
+          text-align: left;
+        }
+      }
+    }
+    .contact-form {
+      grid-area: form;
+      background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+      padding: 1.5rem 2rem;
+      text-align: left;
+      color: #fff;
+      h1 {
+        font-size: 2rem;
+        margin: 0rem 0rem 0.5rem 0rem;
+      }
+      p {
+        padding-bottom: 1rem;
+        font-size: 0.75rem;
+      }
+      input {
+        padding: 0.5rem 1rem;
+        margin: 0 0.3rem 0.5rem 0.3rem;
+        display: inline-block;
+        width: 45%;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+      }
+      textarea {
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+      }
+      button {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+#disclamer-hero {
+  position: relative;
+  background: #cacaca;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #cacaca;
+    z-index: -1;
+  }
+  .disclamer-hero-container {
+    h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      font-family: "Mukta", sans-serif;
+      line-height: 0.8;
+      margin: 5rem 0 1rem 0;
+    }
+  }
+}

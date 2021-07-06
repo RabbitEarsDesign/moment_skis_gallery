@@ -1,0 +1,103 @@
+/*///////// Grid /////////*/
+
+/* Grid Item */
+#main-gallery {
+  margin-bottom: 2rem;
+  .page-header {
+    h2 {
+      font-size: 4rem;
+      margin-top: 4rem;
+    }
+  }
+  .section-header {
+    h3 {
+      font-size: 4rem;
+      margin: 0;
+    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 2rem 0;
+  }
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+
+    // Establishing the overlay on hover effect //
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      opacity: 0;
+      background: $bg-opacity-high;
+      transition: all 500ms ease;
+      box-shadow: inset 0 0 100px 10px $bg-opacity-high;
+    }
+
+    &:hover {
+      // Apply overlay on hover
+      &:before {
+        height: 100%;
+        opacity: 1;
+      }
+      // Change image size on hover
+      img {
+        transform: scale(0.95);
+        position: relative;
+        z-index: -1;
+      }
+      // Show ski details on hover
+      .img-details {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .image-wrapper {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: auto;
+        height: 600px;
+        margin-top: 3rem;
+        transition: all 500ms ease-in;
+      }
+    }
+
+    // Details about the ski on hover (currently not in use)
+    .img-details {
+      position: absolute;
+      place-content: center;
+      opacity: 0;
+      // background: blue;
+      width: 100px;
+      height: 100px;
+      transition: all 500ms ease;
+      transform: scale(0);
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+    h4 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      margin: 0.5rem;
+    }
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
