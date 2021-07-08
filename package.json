@@ -1,0 +1,22 @@
+{
+  "name": "moment_gallery",
+  "version": "1.0.0",
+  "description": "Moment Gallery",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlackHeritage/moment_gallery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlackHeritage/moment_gallery/issues"
+  },
+  "homepage": "https://github.com/BlackHeritage/moment_gallery#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
